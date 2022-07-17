@@ -1,0 +1,45 @@
+server:
+  http2.enabled: false
+  servlet.context-path: /
+  port: ${oscm.server.port}
+
+spring:
+  main.allow-bean-definition-overriding: true
+  jpa.hibernate.ddl-auto: validate
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: ${oscm.spring.datasource.url}
+    username: ${oscm.spring.datasource.username}
+    password: ${oscm.spring.datasource.password}
+    hikari:
+      minimum-idle: 2
+      maximum-pool-size: 20
+      max-lifetime: 60000
+      connection-timeout: 10000
+      connection-test-query: select now()
+      validation-timeout: 5000
+  jackson.default-property-inclusion: non_null
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration
+  task.scheduling.pool.size: 4
+
+scheduler:
+  enabled: true
+
+management:
+  endpoints.web.exposure.include: loggers,health,beans,info,prometheus
+  endpoint:
+    health:
+      show-details: always
+      group:
+        readiness:
+          show-details: always
+          include: ping, db, diskSpace
+        liveness:
+          show-details: always
+          include: ping
+        integration:
+          show-details: always
+          include: restIntegration, kafkaConsumer
+

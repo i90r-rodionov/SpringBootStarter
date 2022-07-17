@@ -1,0 +1,11 @@
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="001-create-table-idempotent-record"
+               author="Igor Rodionov" runAlways="false" failOnError="true" labels="r1.0.0">
+        <sqlFile path="sql/001_create_table_idempotent_record.sql" dbms="h2, postgresql"
+                 relativeToChangelogFile="true" splitStatements="true"/>
+    </changeSet>
+</databaseChangeLog>

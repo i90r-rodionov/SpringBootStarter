@@ -1,0 +1,6 @@
+2022-06-27 00:36:55,083 DEBUG org.example.starter.core.service.engine.impl.AsyncServiceImpl [task-7]    ... runAsync stop  [task-7] arg=[4c3091cd-5501-4720-80f3-2b24561cb064]
+2022-06-27 00:36:57,090 DEBUG org.example.starter.core.service.scheduler.ExecOnTimerService [scheduling-1]    ... execOnTimer [scheduling-1]
+2022-06-27 00:36:57,091 DEBUG org.example.starter.core.service.engine.impl.AsyncServiceImpl [task-1]    ... runAsync start [task-1] arg=[6497c21e-7366-49f9-991b-411c953df06e]
+2022-06-27 00:36:58,090 DEBUG org.example.starter.core.service.engine.impl.AsyncServiceImpl [task-8]    ... runAsync stop  [task-8] arg=[5d8a4b28-b512-4c10-ad8a-8e871eb438f4]
+2022-06-27 00:37:00,102 DEBUG org.example.starter.core.service.scheduler.ExecOnTimerService [scheduling-1]    ... execOnTimer [scheduling-1]
+2022-06-27 00:37:00,102 DEBUG org.example.starter.core.service.engine.impl.AsyncServiceImpl [task-2]    ... runAsync start [task-2] arg=[2f6be876-da93-4168-abd0-9b0f01e046aa]
